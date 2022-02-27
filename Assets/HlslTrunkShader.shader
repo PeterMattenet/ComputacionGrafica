@@ -159,9 +159,9 @@ Shader "HlslTrunkShader"
                 float4 Color_Lerp_Result = lerp(BaseColor_1, BaseColor_2, UV0_Frac);
                 float _Property_02cc988a36c74c8896abb9c4618613f3_Out_0 = PatternNoise_Float;
                 float Gradient_Noise;
-                Unity_GradientNoise_float((TransformWorldToObject(varyings.positionWS).xy), PatternNoise_Float, Gradient_Noise);
-                float Scaled_Gradient_Noise = Gradient_Noise * 0.04;
-                float4 Color_With_Noise_Pattern = Color_Lerp_Result - (Scaled_Gradient_Noise.xxxx);
+                Unity_GradientNoise_float((TransformObjectToWorld(varyings.positionCS).xy), PatternNoise_Float, Gradient_Noise);
+                float Scaled_Gradient_Noise = Gradient_Noise * 0.25;
+                float4 Color_With_Noise_Pattern = Color_Lerp_Result - float4(Scaled_Gradient_Noise.xxx,1);
                 
                 float metallic            = 1;
                 float specular            = IsGammaSpace() ? float3(0, 0, 0) : SRGBToLinear(float3(0, 0, 0));
@@ -204,7 +204,7 @@ Shader "HlslTrunkShader"
                 // Componente difusa
                 // To ensure backward compatibility we have to avoid using shadowMask input, as it is not present in older shaders
                 half4 shadowMask = unity_ProbesOcclusion;
-                float shadowAttenuation = MainLightShadow(varyings.shadowCoord, varyings.positionWS, shadowMask, _MainLightOcclusionProbes); 
+                float shadowAttenuation = MainLightShadow(varyings.shadowCoord, TransformObjectToWorld(varyings.positionWS), shadowMask, _MainLightOcclusionProbes); 
                 half NdotL = saturate(dot(varyings.normalWS, _MainLightPosition.xyz));
                 half3 radiance = _MainLightColor.rgb * (shadowAttenuation * NdotL);
                 color += brdfData.diffuse * radiance;

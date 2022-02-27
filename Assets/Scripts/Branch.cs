@@ -36,8 +36,6 @@ public class Branch
 		this.parent = parent;
     }
 
-    // Espejar un Branch en la direccion contraria. Buscar un vector ortogonal a la norm y al cross prod de la norma y vec???
-    // Que tiene que ver el branch factor por el dot product entre v y vec
     public Vector3 MirrorBranch(Vector3 vec, Vector3 norm, TreeInputProperties properties) {
         var v = Vector3.Cross(norm,Vector3.Cross(vec,norm));
 		var s = properties.branchFactor * Vector3.Dot(v,vec);

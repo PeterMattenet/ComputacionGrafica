@@ -36,18 +36,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - PatternNoise_Float: 3.3
+    - PatternNoise_Float: 0.02
     - Vector1_24b4e507efa649b285d5ae66f46ffd14: 0
     - Vector1_2624cfa301d54f80bcc4cf69ba93ff6e: 6
     - Vector1_2b3db3b1de754393952eb7d5e40705aa: -0.48
     - Vector1_8a7d3b4ca31a4c0280d758e7680d4f24: 0.03
     - Vector1_8cd756887f0b4655bd25bed00936f7a7: 0.7
-    - WindDensity_Float: 0.39
+    - WindDensity_Float: 0.09
     - WindStrength_Float: -0.1
     - WindSymmetry_Float: -0.1
     m_Colors:
-    - BaseColor_1: {r: 0.5471698, g: 0.34751436, b: 0.05420078, a: 0}
-    - BaseColor_2: {r: 0.5754717, g: 0.28257406, b: 0.1004361, a: 0}
+    - BaseColor_1: {r: 0.6415094, g: 0.5272806, b: 0.19063723, a: 0}
+    - BaseColor_2: {r: 0.5566038, g: 0.3312774, b: 0.112896055, a: 0}
     - Color_1: {r: 0.44339618, g: 0.27919573, b: 0.069019206, a: 0}
     - Color_875ab9de4c8443bd99e7162d7dfefb0c: {r: 0.6981132, g: 0.33325863, b: 0.1415984, a: 0}
     - Vector3_7ff5ee9651c24a3e80d030cae997ff24: {r: 1, g: 0, b: 0, a: 0}

@@ -60,9 +60,9 @@ Material:
     - Vector1_8a7d3b4ca31a4c0280d758e7680d4f24: 0.43
     - Vector1_8cd756887f0b4655bd25bed00936f7a7: 0.42
     - Vector1_e20ccd8214b9487fb5174efff294bb0f: 1
-    - WindDensity_Float: 0.42
-    - WindStrength_Float: 0.88
-    - WindSymmetry_Float: -0.87
+    - WindDensity_Float: 0.05
+    - WindStrength_Float: 0.1
+    - WindSymmetry_Float: 0.06
     m_Colors:
     - UvRoot_Float: {r: 0.5, g: 0, b: 0, a: 0}
     - Vector2_6eb17ab53f2a4540aacfa9872c6903b8: {r: 6, g: 0, b: 0, a: 0}
