@@ -60,14 +60,14 @@ Material:
     - Vector1_8a7d3b4ca31a4c0280d758e7680d4f24: 0.43
     - Vector1_8cd756887f0b4655bd25bed00936f7a7: 0.42
     - Vector1_e20ccd8214b9487fb5174efff294bb0f: 1
-    - WindDensity_Float: 0.05
-    - WindStrength_Float: 0.1
-    - WindSymmetry_Float: 0.06
+    - WindDensity_Float: 0.17
+    - WindStrength_Float: 0.8164473
+    - WindSymmetry_Float: -0.4135008
     m_Colors:
     - UvRoot_Float: {r: 0.5, g: 0, b: 0, a: 0}
     - Vector2_6eb17ab53f2a4540aacfa9872c6903b8: {r: 6, g: 0, b: 0, a: 0}
     - Vector2_9c1ac1da37904f5e8d2f729b6380a29d: {r: 0.5, g: 0, b: 0, a: 0}
     - Vector3_381b7481269d49f18e76ba0bc7d6ac6b: {r: 1, g: 0.2, b: 0.4, a: 0}
-    - WindDirection_Vector3: {r: 0.34, g: -0.05, b: 1.46, a: 0}
+    - WindDirection_Vector3: {r: 1, g: 0, b: 0, a: 0}
     - WindMovement_Vec2: {r: 6, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

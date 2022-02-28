@@ -13,6 +13,7 @@ public class BaseTreeRender : MonoBehaviour
     protected int[] triangles;
     protected ProcTree Tree;
     private TreeMeshGenerartor _treeMeshGenerator;
+    protected bool newTree = true;
     
     protected void Start()
     {
@@ -28,4 +29,19 @@ public class BaseTreeRender : MonoBehaviour
     protected void Update() {
         Tree = Tree ?? _treeMeshGenerator.Tree;
     }
+    
+    public void AdjustWindSymemetry(float windSymmetry) {
+        gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("WindSymmetry_Float", windSymmetry);
+        this.meshRenderer.material = material;
+    }
+    public virtual void AdjustWindStrength(float windStrength) {
+        gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("WindStrength_Float", windStrength);
+        this.meshRenderer.material = material;
+    }
+
+    public void NewTree(ProcTree tree){
+        Tree = tree;
+        newTree = true;
+    }
+
 }

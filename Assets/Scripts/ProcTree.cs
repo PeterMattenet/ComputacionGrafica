@@ -87,7 +87,7 @@ public class ProcTree
 			}
 		}
 		
-		Vector3 anchor = branch.type != "trunk" ? branch.anchor != null ? branch.anchor.head : Vector3.zero : Vector3.zero;
+		Vector3 anchor = branch.anchor != null ? branch.anchor.head : Vector3.zero;
 		
 		//Vector3.Cross the branches to get the left
 		//add the branches to get the up

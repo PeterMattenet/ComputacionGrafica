@@ -139,6 +139,7 @@ Shader "HlslTrunkShader"
                 float3 normalWS = TransformObjectToWorldNormal(input.normalOS);
                 float4 tangentWS = float4(TransformObjectToWorldDir(input.tangentOS.xyz), input.tangentOS.w);
                 
+                varyings.positionWS = positionWS;
                 varyings.normalWS = normalWS;	
                 varyings.positionCS = TransformWorldToHClip(positionWS);
                 varyings.texCoord0 = input.uv0;
@@ -159,7 +160,7 @@ Shader "HlslTrunkShader"
                 float4 Color_Lerp_Result = lerp(BaseColor_1, BaseColor_2, UV0_Frac);
                 float _Property_02cc988a36c74c8896abb9c4618613f3_Out_0 = PatternNoise_Float;
                 float Gradient_Noise;
-                Unity_GradientNoise_float((TransformObjectToWorld(varyings.positionCS).xy), PatternNoise_Float, Gradient_Noise);
+                Unity_GradientNoise_float(varyings.positionWS.xy, PatternNoise_Float, Gradient_Noise);
                 float Scaled_Gradient_Noise = Gradient_Noise * 0.25;
                 float4 Color_With_Noise_Pattern = Color_Lerp_Result - float4(Scaled_Gradient_Noise.xxx,1);
                 
